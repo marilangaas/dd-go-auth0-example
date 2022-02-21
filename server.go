@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	tracer.Start(tracer.WithService("example"))
+	tracer.Start(tracer.WithService(config.DataDogServiceName))
 	defer tracer.Stop()
 
 	cfg, err := config.NewConfig("config")
